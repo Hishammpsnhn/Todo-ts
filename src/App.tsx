@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import Input from './components/Input';
+import TodoList from './components/TodoList';
 import { Todo } from './modal';
 
 const App:React.FC = () => {
@@ -19,6 +20,7 @@ const App:React.FC = () => {
     <div className='App'>
       <span className="heading" >Taskify</span>
       <Input todo={todo} setTodo={setTodo} handleSumbit={handleSubmit} />
+      <TodoList todos={todos} setTodos={setTodos} />
     </div>
   )
 }
